@@ -33,7 +33,7 @@ Page({
         wx.hideToast()
         this.scroll();
       },
-      fail:res=>{
+      fail: res => {
         console.log('fail');
       }
     })

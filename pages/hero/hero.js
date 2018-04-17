@@ -69,7 +69,7 @@ Page({
             rate_data: d
           })
         },
-        fail: res=>{
+        fail: res => {
           console.log('fail')
         }
       })

@@ -1,62 +1,69 @@
 /* pages/schedule/schedule.wxss */
 
 .title {
-  margin:20rpx;
-  padding:20rpx;
-  background-color:#1890ff;
-  border-radius:10rpx;
-  color:#fff;
+  margin: 20rpx;
+  padding: 20rpx;
+  background-color: #1890ff;
+  border-radius: 10rpx;
+  color: #fff;
   display: inline-block;
   font-size: 8pt;
 }
 
-.time{
+.time {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  padding:0 0 20rpx 30rpx;
-  background:#f5f5f5;
-  height:50rpx;
-  font-size:10pt;
-  color:#595959;
+  padding: 0 0 0 30rpx;
+  background: rgb(241, 241, 241);
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 10pt;
+  color: rgb(116, 127, 126);
 }
-.li{
-  font-size:8pt;
+
+.li {
+  font-size: 8pt;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height:200rpx;
-  border-bottom:1rpx solid #e8e8e8;
+  height: 200rpx;
+  border-bottom: 1rpx solid #e8e8e8;
 }
-.li:last-child{
-  border:0;
+
+.li:last-child {
+  border: 0;
 }
-.corps{
+
+.corps {
   text-align: center;
-  width:33.33%;
+  width: 33.33%;
 }
-.info{
-  width:33.33%;
+
+.info {
+  width: 33.33%;
   height: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
 }
-.corps-name{
-  font-size:11pt;
+
+.corps-name {
+  font-size: 11pt;
 }
-.time-label{
-  font-size:8pt;
-  color:#bfbfbf;
+
+.time-label {
+  font-size: 8pt;
+  color: rgb(106, 118, 117);
 }
-.vs{
-  font-size:11pt;
-  color:#8c8c8c;
+
+.vs {
+  font-size: 11pt;
+  color: rgba(74, 74, 74);
 }
-.detail{
-  background:#f5f5f5;
-  padding:10rpx 60rpx;
-  border-radius:20rpx;
-  color:#1890ff;
+
+.detail {
+  background: rgb(56, 131, 250);
+  padding: 10rpx 50rpx;
+  border-radius: 10rpx;
+  color: #fff;
 }

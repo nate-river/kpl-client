@@ -11,12 +11,15 @@
       <view wx:for="{{item}}" wx:key="{{index}}" class="li">
         <view class="corps">
           <view class="win"></view>
-          <view class="corps-logo"></view>
+          <view class="corps-logo" style="background:url() no-repeat center center/100% 100%">
+          </view>
           <view class="corps-name">{{item.hometeam.name}}</view>
         </view>
         <view class="info">
           <view class="time-label"> {{item.time}}</view>
-          <view class="vs">{{item.hometeam.score}} : {{item.guesteam.score}}</view>
+          <view class="vs">
+            {{item.hometeam.score}} : {{item.guesteam.score}}
+          </view>
           <navigator wx:if="{{item.state}}" url="/pages/detail/detail?id={{item.id}}" hover-class="navigator-hover">
             <view class="detail">
               查看出装

@@ -1,9 +1,8 @@
 {
   "pages": [
-    "pages/hero/hero",
     "pages/schedule/schedule",
-    "pages/detail/detail"
-    
+    "pages/detail/detail",
+    "pages/hero/hero"
   ],
   "window": {
     "backgroundTextStyle": "dark",
