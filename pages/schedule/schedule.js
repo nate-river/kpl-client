@@ -17,7 +17,7 @@ Page({
   refresh: function () {
     wx.showToast({
       icon: 'loading',
-      duration: 10000,
+      duration: 20000,
     })
     let task = wx.request({
       url: 'https://kpldata.duapp.com/schedule',
@@ -32,6 +32,9 @@ Page({
         }
         wx.hideToast()
         this.scroll();
+      },
+      fail:res=>{
+        console.log('fail');
       }
     })
     this.setData({

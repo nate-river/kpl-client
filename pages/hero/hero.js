@@ -8,6 +8,7 @@ Page({
     rate_data: [],
     filter: 1
   },
+
   sort: function (e) {
     let type = e.currentTarget.dataset.type;
     this.setData({
@@ -35,39 +36,44 @@ Page({
 
   },
   format: function (num) {
-    return (num * 100).toFixed(2) + '%';
+    return (num * 100).toFixed(1) + '%';
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    wx.showToast({
-      icon: 'loading',
-      duration: 10000,
-    })
-    wx.request({
-      url: 'https://kpldata.duapp.com/rate',
-      success: res => {
-        wx.hideToast()
-        let d = res.data.map((v, i) => {
-          v.total = this.format(v.popularity + v.banrate);
-          v.pop = this.format(v.popularity);
-          v.ban = this.format(v.banrate);
-          v.win = this.format(v.winrate);
-          return v;
-        })
-        this.setData({
-          rate_data: d
-        })
-      }
-    })
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    if (!this.data.rate_data.length) {
+      wx.showToast({
+        icon: 'loading',
+        duration: 20000,
+      })
+      wx.request({
+        url: 'https://kpldata.duapp.com/rate',
+        success: res => {
+          wx.hideToast()
+          let d = res.data.map((v, i) => {
+            v.total = this.format(v.popularity + v.banrate);
+            v.pop = this.format(v.popularity);
+            v.ban = this.format(v.banrate);
+            v.win = this.format(v.winrate);
+            return v;
+          })
+          this.setData({
+            rate_data: d
+          })
+        },
+        fail: res=>{
+          console.log('fail')
+        }
+      })
+    }
   },
 
   /**
