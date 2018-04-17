@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/schedule/schedule",
+    "pages/detail/detail",
+    "pages/hero/hero"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#096dd9",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#1890ff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/schedule/schedule",
+        "text": "赛况",
+        "iconPath": "/img/schedule.png",
+        "selectedIconPath": "/img/schedule_active.png"
+      },
+      {
+        "pagePath": "pages/hero/hero",
+        "text": "英雄",
+        "iconPath": "/img/hero.png",
+        "selectedIconPath": "/img/hero_active.png"
+      }
+    ]
+  }
+}

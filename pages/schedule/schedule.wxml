@@ -1,0 +1,34 @@
+<!--pages/schedule/schedule.wxml-->
+<view class="container">
+  <view class="title">
+    KPL王者职业联赛
+  </view>
+  <view wx:for="{{schedule}}" wx:key="{{index}}" id="node-{{index}}" class="schedule">
+    <view class="time">
+      2018春季赛 ({{index}})
+    </view>
+    <view class="ul">
+      <view wx:for="{{item}}" wx:key="{{index}}" class="li">
+        <view class="corps">
+          <view class="win"></view>
+          <view class="corps-logo"></view>
+          <view class="corps-name">{{item.hometeam.name}}</view>
+        </view>
+        <view class="info">
+          <view class="time-label"> {{item.time}}</view>
+          <view class="vs">{{item.hometeam.score}} : {{item.guesteam.score}}</view>
+          <navigator wx:if="{{item.state}}" url="/pages/detail/detail?id={{item.id}}" hover-class="navigator-hover">
+            <view class="detail">
+              查看出装
+            </view>
+          </navigator>
+        </view>
+        <view class="corps">
+          <view class="win"></view>
+          <view class="corps-logo"></view>
+          <view class="corps-name">{{item.guesteam.name}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

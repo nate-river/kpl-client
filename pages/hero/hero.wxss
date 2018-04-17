@@ -1,0 +1,52 @@
+/* pages/hero/hero.wxss */
+
+.hero {
+  padding: 0 20px;
+}
+
+.header {
+  height: 88rpx;
+}
+
+.th {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.th-item {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  width: 20%;
+  text-align: left;
+  font-size: 12pt;
+  height: 100%;
+  /* color: #8c8c8c; */
+  border-bottom: 1rpx solid #d9d9d9;
+}
+
+.active {
+  color: #ff7875;
+}
+
+.hero-th {
+  display: flex;
+}
+
+.td {
+  line-height: 80rpx;
+  text-align: left;
+  height: 80rpx;
+  width: 20%;
+  font-size: 9pt;
+}
+
+.td:first-child {
+  font-size: 9pt;
+  /* width:30px;
+  height:30px;
+  border-radius:50%; */
+}
+
+

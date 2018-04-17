@@ -1,0 +1,47 @@
+<!--pages/detail/detail.wxml-->
+<view class="container">
+  <view class="header">
+    <view wx:for="{{detail_data}}" wx:key="{{index}}" class="list {{index===current?'active':''}}" bindtap="change_current" data-index="{{index}}">
+      第 {{index + 1}} 局
+    </view>
+  </view>
+  <view class="corps">
+    <view wx:if="{{detail_data[current].hometeam}}" class="corps-state win">
+      {{detail_data[current].hometeam.name}} {{detail_data[current].hometeam.score?'胜利':'失败'}}
+    </view>
+
+    <view class="pick">
+      <view wx:for="{{detail_data[current].hometeam.pick}}" wx:key="{{index}}" class="pick-item">
+        <view class="pick-hero hero-{{item.hero}}"></view>
+        <view class="info">
+          <view class="name">
+            <!-- Holic -->
+          </view>
+          <view class="equ">
+            <view wx:for="{{item.equ}}" wx:key="{{index}}" class="equ-item" style="background:#999 url({{equs[item]}}) no-repeat center center/100% 100%">
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="corps">
+    <view wx:if="{{detail_data[current].guesteam}}" class="corps-state">
+      {{detail_data[current].guesteam.name}} {{detail_data[current].guesteam.score?'胜利':'失败'}}
+    </view>
+     <view class="pick">
+      <view wx:for="{{detail_data[current].guesteam.pick}}" wx:key="{{index}}" class="pick-item">
+        <view class="pick-hero hero-{{item.hero}}"></view>
+        <view class="info">
+          <view class="name">
+          </view>
+          <view class="equ">
+            <view wx:for="{{item.equ}}" wx:key="{{index}}" class="equ-item" style="background:#999 url({{equs[item]}}) no-repeat center center/100% 100%">
+            </view>
+          </view>
+        </view>
+      </view>
+    </view> 
+  </view>
+</view>
