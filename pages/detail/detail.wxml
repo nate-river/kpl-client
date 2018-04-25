@@ -8,7 +8,7 @@
   </view>
 
   <view class="corps">
-    <view wx:if="{{detail_data[current].hometeam}}" class="corps-state win">
+    <view wx:if="{{detail_data[current].hometeam}}" class="corps-state {{detail_data[current].hometeam.score?'win':''}}">
       {{detail_data[current].hometeam.name}} {{detail_data[current].hometeam.score?'胜利':'失败'}}
     </view>
 
@@ -26,16 +26,16 @@
         </view>
         <view class="data">
           <view class="kda"> {{item.kda}} </view>
-          <view class="money">{{item.money}} - 金钱</view>
-          <view class="damage">{{item.damage}} - 输出</view>
-          <view class="endure">{{item.endure}} - 承伤</view>
+          <!-- <view class="money">{{item.money}} - 金钱</view> -->
+           <!-- <view class="damage">{{item.damage}} - 输出</view>  -->
+          <!-- <view class="endure">{{item.endure}} - 承伤</view> -->
         </view>
       </view>
     </view>
   </view>
 
   <view class="corps">
-    <view wx:if="{{detail_data[current].guesteam}}" class="corps-state">
+    <view wx:if="{{detail_data[current].guesteam}}" class="corps-state {{detail_data[current].guesteam.score?'win':''}}">
       {{detail_data[current].guesteam.name}} {{detail_data[current].guesteam.score?'胜利':'失败'}}
     </view>
     <view class="pick">
@@ -52,9 +52,9 @@
         </view>
         <view class="data">
           <view class="kda"> {{item.kda}} </view>
-          <view class="money">{{item.money}} - 金钱</view>
-          <view class="damage">{{item.damage}} - 输出</view>
-          <view class="endure">{{item.endure}} - 承伤</view>
+          <!-- <view class="money">{{item.money}} - 金钱</view> -->
+           <!-- <view class="damage">{{item.damage}} - 输出</view>  -->
+           <!-- <view class="endure">{{item.endure}} - 承伤</view>  -->
         </view>
       </view>
     </view>

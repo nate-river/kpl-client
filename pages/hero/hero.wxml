@@ -11,8 +11,9 @@
     </view>
   </view>
   <view wx:for="{{rate_data}}" wx:key="index" class="hero-th">
-    <view class="td">
-      {{item.heroname}}
+    <view class="td hero-{{item.heroid}}" style="background-position:center center; background-size:80rpx 80rpx">
+      <!-- {{item.heroname}} -->
+      <view class="order">{{index + 1}}</view>
     </view>
     <view class="td">{{item.pop}}</view>
     <view class="td">{{item.ban}}</view>
