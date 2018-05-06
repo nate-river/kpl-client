@@ -1,4 +1,3 @@
-let equs = require('../../utils/equs.js');
 Page({
   /**
    * 页面的初始数据
@@ -6,8 +5,7 @@ Page({
   data: {
     detail_data: [],
     current: 0,
-    match_id: null,
-    equs
+    match_id: null
   },
   change_current: function (e) {
     this.setData({

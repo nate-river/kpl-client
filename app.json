@@ -5,8 +5,8 @@
     "pages/hero/hero"
   ],
   "window": {
-    "backgroundTextStyle": "dark",
-    "navigationBarBackgroundColor": "#096dd9",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0084ff",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {

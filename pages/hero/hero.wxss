@@ -9,6 +9,8 @@
   justify-content: center;
   height: 100%;
   padding: 0 20rpx;
+   /* border-top:1rpx solid #353535;  */
+   border-bottom:1rpx solid rgb(240, 240, 240); 
 }
 
 .th-item {
@@ -23,6 +25,10 @@
 }
 
 .active {
+  background-image:url(data:img/jpg;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAAAAXNSR0IArs4c6QAAAPJJREFUKBVj9J38QvHvv98bGBkYOBlIAP8ZGN6yMzP6APUxMHhPfBTx/z/DcqL1MzL8ZmZkdN2cJ3uQCaRpa77cCkZGpmZiDWBiZMwGaQapB7sAxPj//z+j96Qnq4GMYBAfJ2BknLgtX7YAJg92AYjDyMj4n5mDOQ7IOA+TRKcZGRh3ckvKFCOLww0ACW5Ol/rGwcjox8jI8AJZEYgNtOAGFyd3+Oowxr/IcigGgCTW5ck8+c/MGAD03A+EQsZ3zCwMvqvThT4ixCAsDANAwttyZE8CAyoFooTxDzMzY+imbNk7ED4JpPekR60+E59k4NMCAA7cOz15Je4eAAAAAElFTkSuQmCC);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size:20rpx auto;
   color: rgb(0, 123, 246);
 }
 
@@ -37,7 +43,7 @@
 }
 
 .td {
-  line-height: 80rpx;
+  line-height: 100rpx;
   text-align: center;
   height: 100rpx;
   width: 20%;
@@ -45,8 +51,12 @@
   color: rgb(79, 100, 115);
   position: relative;
 }
+
+.td:first-child{
+   border-right:1rpx solid rgb(240, 240, 240); 
+}
 .order{
-  color: #000;
+  color: #353535;
   position: absolute;
   height: 100%;
   left:-10rpx;

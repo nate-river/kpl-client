@@ -3,7 +3,7 @@
   <view class="header">
     <view class="th">
       <view class="th-item">
-        英雄
+         英雄 
       </view>
       <view wx:for="{{[{type:1,name:'选率'},{type:2,name:'搬率'},{type:3,name:'BP率'},{type:4,name:'胜率'}]}}" wx:key="{{index}}" class="th-item {{item.type==filter?'active':''}}" bindtap="sort" data-type="{{item.type}}">
         {{item.name}}
@@ -13,7 +13,7 @@
   <view wx:for="{{rate_data}}" wx:key="index" class="hero-th">
     <view class="td hero-{{item.heroid}}" style="background-position:center center; background-size:80rpx 80rpx">
       <!-- {{item.heroname}} -->
-      <view class="order">{{index + 1}}</view>
+      <!-- <view class="order">{{index + 1}}</view> -->
     </view>
     <view class="td">{{item.pop}}</view>
     <view class="td">{{item.ban}}</view>

@@ -3,7 +3,7 @@
 
   <view class="header">
     <view wx:for="{{detail_data}}" wx:key="{{index}}" class="list {{index===current?'active':''}}" bindtap="change_current" data-index="{{index}}">
-      Match {{index+1}}
+      第 {{index+1}} 局
     </view>
   </view>
 
@@ -20,7 +20,7 @@
             {{item.user_name}}
           </view>
           <view class="equ">
-            <view wx:for="{{item.equ}}" wx:key="{{index}}" class="equ-item" style="background:#999 url({{equs[item]}}) no-repeat center center/100% 100%">
+            <view wx:for="{{item.equ}}" wx:key="{{index}}" class="equ-item equ-{{item}}">
             </view>
           </view>
         </view>
@@ -46,7 +46,7 @@
             {{item.user_name}}
           </view>
           <view class="equ">
-            <view wx:for="{{item.equ}}" wx:key="{{index}}" class="equ-item" style="background:#999 url({{equs[item]}}) no-repeat center center/100% 100%">
+            <view wx:for="{{item.equ}}" wx:key="{{index}}" class="equ-item equ-{{item}}">
             </view>
           </view>
         </view>
