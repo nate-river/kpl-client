@@ -50,14 +50,11 @@ Page({
    */
   onShow: function () {
     if (!this.data.rate_data.length) {
-      wx.showToast({
-        icon: 'loading',
-        duration: 20000,
-      })
+      wx.showNavigationBarLoading()
       wx.request({
         url: 'https://kpldata.duapp.com/rate',
         success: res => {
-          wx.hideToast()
+          wx.hideNavigationBarLoading()
           let d = res.data.map((v, i) => {
             v.total = this.format(v.popularity + v.banrate);
             v.pop = this.format(v.popularity);
@@ -70,7 +67,11 @@ Page({
           })
         },
         fail: res => {
-          console.log('fail')
+          wx.showToast({
+            title: '网络不给力',
+            icon: 'none',
+            duration: 500
+          })
         }
       })
     }

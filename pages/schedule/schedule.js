@@ -15,10 +15,7 @@ Page({
   onLoad: function (options) {
   },
   refresh: function () {
-    wx.showToast({
-      icon: 'loading',
-      duration: 20000,
-    })
+    wx.showNavigationBarLoading()
     let task = wx.request({
       url: 'https://kpldata.duapp.com/schedule',
       success: res => {
@@ -30,11 +27,15 @@ Page({
         } else {
 
         }
-        wx.hideToast()
+        wx.hideNavigationBarLoading()
         this.scroll();
       },
       fail: res => {
-        console.log('fail');
+        wx.showToast({
+          title: '网络不给力',
+          icon: 'none',
+          duration: 500
+        })
       }
     })
     this.setData({

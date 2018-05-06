@@ -14,29 +14,27 @@ Page({
   },
   refresh: function () {
     // if (this.data.match_id) {
-    wx.showToast({
-      icon: 'loading',
-      duration: 10000,
-    })
+    wx.showNavigationBarLoading()
     wx.request({
       url: 'https://kpldata.duapp.com/match',
       data: {
         id: this.data.match_id || 40339
       },
       success: res => {
-        wx.hideToast()
-
+        wx.hideNavigationBarLoading()
         if (res.data.status === 200) {
           this.setData({
             detail_data: res.data.data.reverse()
           })
         } else {
-          wx.showToast({
-            title: '网络不给力',
-            icon: 'none',
-            duration: 500
-          })
         }
+      },
+      fail:res=>{
+        wx.showToast({
+          title: '网络不给力',
+          icon: 'none',
+          duration: 500
+        })
       }
     })
     // }
