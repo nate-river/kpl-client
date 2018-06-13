@@ -1,8 +1,13 @@
 <!--pages/schedule/schedule.wxml-->
 <view class="container">
-  <view class="title">
-    KPL王者职业联赛
+  <view bindtap="change" data-url="jihousai" class="title {{url=='jihousai'?'active':''}}">
+    KPL春季赛季后赛
   </view>
+
+  <view bindtap="change" data-url="schedule" class="title {{url=='schedule'?'active':''}}">
+    KPL春季赛常规赛
+  </view>
+
   <view wx:for="{{schedule}}" wx:key="{{index}}" id="node-{{index}}" class="schedule">
     <view class="time">
       2018春季赛 ({{index}})

@@ -1,0 +1,24 @@
+<view class="container">
+  <view class="corps">
+  <view  class="corps-state ">
+      <view class="state">只展示最近20条</view>
+    </view>
+    <view class="pick">
+      <view wx:for="{{items}}" wx:key="{{index}}" class="pick-item">
+        <view class="pick-hero hero-{{item.hero}}" ></view>
+        <view class="info">
+          <view class="name">
+            {{item.user_name}}
+          </view>
+          <view class="equ">
+            <view wx:for="{{item.equ}}" wx:key="{{index}}" class="equ-item equ-{{item}}">
+            </view>
+          </view>
+        </view>
+        <!-- <view class="data">
+          <view class="kda"> {{item.kda}} </view>
+        </view> -->
+      </view>
+    </view>
+  </view>
+</view>

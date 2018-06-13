@@ -6,7 +6,7 @@ Page({
    */
   data: {
     rate_data: [],
-    filter: 1
+    filter: 3
   },
 
   sort: function (e) {
@@ -14,16 +14,16 @@ Page({
     this.setData({
       filter: type,
       rate_data: this.data.rate_data.sort((a, b) => {
-        if (type === 1) {
+        if (type == 1) {
           return b.popularity - a.popularity;
         }
-        else if (type === 2) {
+        else if (type == 2) {
           return b.banrate - a.banrate;
         }
-        else if (type === 3) {
+        else if (type == 3) {
           return (b.popularity + b.banrate) - (a.popularity + a.banrate);
         }
-        else if (type === 4) {
+        else if (type == 4) {
           return b.winrate - a.winrate;
         }
       })
@@ -65,6 +65,14 @@ Page({
           this.setData({
             rate_data: d
           })
+          let e = {
+            currentTarget:{
+              dataset:{
+                type:3
+              }
+            }
+          };
+          this.sort(e);
         },
         fail: res => {
           wx.showToast({

@@ -11,7 +11,7 @@
         胜率
       </view>
       <view class="th-item {{filter==3?'active':''}}" bindtap="sort" data-type="3">
-        出场率
+        登场率
       </view>
       <view class="th-item">
         出装
@@ -20,14 +20,14 @@
   </view>
 
   <view class="body">
-    <view class="hero-th" wx:for="{{rate_data}}" wx:key="{{index}}">
+    <view class="hero-th" wx:for="{{hero_rank}}" wx:key="{{index}}">
       <view class="td">{{index+1}}</view>
       <view class="td">
         <view class="hero-{{item.heroid}} hero-pic"></view>
         {{item.heroname}}
       </view>
-      <view class="td">{{item.win}}</view>
-      <view class="td">{{item.total}}</view>
+      <view class="td">{{item.winpercent}}%</view>
+      <view class="td">{{item.gameactpercnt}}%</view>
       <navigator url="/pages/hero_equs/hero_equs?hero_id={{item.heroid}}" class="td">查看</navigator>
     </view>
   </view>

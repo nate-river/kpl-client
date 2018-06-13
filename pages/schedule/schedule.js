@@ -5,8 +5,16 @@ Page({
    * 页面的初始数据
    */
   data: {
+    url:'jihousai',
     schedule: null,
     requestTask: null,
+  },
+
+  change:function(e){
+    this.setData({
+      url:e.currentTarget.dataset.url
+    })
+    this.refresh();
   },
 
   /**
@@ -16,8 +24,9 @@ Page({
   },
   refresh: function () {
     wx.showNavigationBarLoading()
+    
     let task = wx.request({
-      url: 'https://kpldata.duapp.com/schedule',
+      url: 'https://kpldata.duapp.com/'+this.data.url,
       success: res => {
 
         if (res.data.status === 200) {
@@ -28,7 +37,7 @@ Page({
 
         }
         wx.hideNavigationBarLoading()
-        this.scroll();
+        // this.scroll();
       },
       fail: res => {
         wx.showToast({

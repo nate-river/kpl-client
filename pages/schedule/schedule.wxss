@@ -3,11 +3,13 @@
 .title {
   margin: 20rpx;
   padding: 20rpx;
-  background-color: #1890ff;
-  border-radius: 10rpx;
-  color: #fff;
+  /* background-color: #bd8c49; *//* border-radius: 10rpx; *//* color: #fff; */
   display: inline-block;
-  font-size: 8pt;
+  font-size: 24rpx;
+}
+
+.active {
+  border-bottom: 1rpx solid #bd8c49;
 }
 
 .time {
@@ -16,12 +18,12 @@
   background: rgb(241, 241, 241);
   height: 70rpx;
   line-height: 70rpx;
-  font-size: 10pt;
+  font-size: 20rpx;
   color: rgb(116, 127, 126);
 }
 
 .li {
-  font-size: 8pt;
+  font-size: 20rpx;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -48,22 +50,23 @@
 }
 
 .corps-name {
-  font-size: 11pt;
+  font-size: 28rpx;
 }
 
 .time-label {
-  font-size: 8pt;
+  font-size: 20rpx;
   color: rgb(106, 118, 117);
 }
 
 .vs {
-  font-size: 11pt;
+  font-size: 28rpx;
   color: rgba(74, 74, 74);
 }
 
 .detail {
-  background: rgb(56, 131, 250);
+  /* background: rgb(56, 131, 250); */
   padding: 10rpx 50rpx;
   border-radius: 10rpx;
-  color: #fff;
+  font-size: 24rpx;
+  color: #bd8c49;
 }
