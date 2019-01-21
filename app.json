@@ -1,43 +1,39 @@
 {
-  "pages": [
-    "pages/hero_rank/hero_rank",
-    "pages/hero_equs/hero_equs",
-   
-   
-    "pages/schedule/schedule",
-    "pages/detail/detail",
-    "pages/hero/hero"
-  ],
-  "window": {
-    "backgroundColor": "#1c2432",
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#1c2432",
-    "navigationBarTextStyle": "white"
-  },
-  "tabBar": {
-    "backgroundColor": "#151f2e",
-    "selectedColor": "#ffffff",
-    "borderStyle": "black",
-    "color": "#c5cbd8",
-    "list": [
-      {
-        "pagePath": "pages/hero_rank/hero_rank",
-        "text": "排位胜率",
-        "iconPath": "/img/rank.png",
-        "selectedIconPath": "/img/rank_selected.png"
-      },
-      {
-        "pagePath": "pages/hero/hero",
-        "text": "赛事胜率",
-        "iconPath": "/img/hero.png",
-        "selectedIconPath": "/img/hero_active.png"
-      },
-      {
-        "pagePath": "pages/schedule/schedule",
-        "text": "KPL赛况",
-        "iconPath": "/img/schedule.png",
-        "selectedIconPath": "/img/schedule_active.png"
-      }
-    ]
-  }
+    "pages": [
+        "pages/hero_rank/hero_rank",
+        "pages/hero/hero",
+        "pages/hero_equs/hero_equs",
+        
+        
+       
+        "pages/schedule/schedule",
+        "pages/detail/detail"
+    ],
+    "window": {
+        "backgroundColor": "#1c2432",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#1c2432",
+        "navigationBarTextStyle": "white",
+        "onReachBottomDistance": 400
+    },
+    "tabBar": {
+        "backgroundColor": "#151f2e",
+        "selectedColor": "#ffffff",
+        "borderStyle": "black",
+        "color": "#c5cbd8",
+        "list": [
+            {
+                "pagePath": "pages/hero_rank/hero_rank",
+                "text": "排位胜率",
+                "iconPath": "/img/rank.png",
+                "selectedIconPath": "/img/rank_selected.png"
+            },
+            {
+                "pagePath": "pages/hero/hero",
+                "text": "比赛胜率",
+                "iconPath": "/img/hero.png",
+                "selectedIconPath": "/img/hero_active.png"
+            }
+        ]
+    }
 }

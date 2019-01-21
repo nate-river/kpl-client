@@ -8,8 +8,9 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "1.9.94",
+	"libVersion": "2.5.0",
 	"appid": "wxae97f1aa6ebd80cc",
+	"cloudfunctionRoot": "function/",
 	"projectname": "kpl-client",
 	"isGameTourist": false,
 	"condition": {

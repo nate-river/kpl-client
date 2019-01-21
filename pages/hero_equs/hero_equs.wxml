@@ -1,17 +1,17 @@
 <view class="container">
   <view class="corps">
   <view  class="corps-state ">
-      <view class="state">只展示最近20条</view>
+      <view class="state">{{hero_name}} - 职业选手实战出装</view>
     </view>
     <view class="pick">
-      <view wx:for="{{items}}" wx:key="{{index}}" class="pick-item">
-        <view class="pick-hero hero-{{item.hero}}" ></view>
+      <view wx:for="{{list}}" wx:key="{{index}}" class="pick-item">
+        <view class="pick-hero" style="background:url({{item.avatar}}) no-repeat center center/ 100% auto"></view>
         <view class="info">
           <view class="name">
-            {{item.user_name}}
+            {{item.playername}}
           </view>
           <view class="equ">
-            <view wx:for="{{item.equ}}" wx:key="{{index}}" class="equ-item equ-{{item}}">
+            <view wx:for="{{item.itemcache}}" wx:key="{{index}}" class="equ-item" style="background:url({{item}}) no-repeat center center/100% auto">
             </view>
           </view>
         </view>

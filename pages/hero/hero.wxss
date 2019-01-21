@@ -1,63 +1,4 @@
-/* pages/hero/hero.wxss */
-/*
-.header {
-  height: 88rpx;
-}
 
-.th {
-  display: flex;
-  justify-content: center;
-  height: 100%;
-  padding: 0 20rpx;
-   /* border-bottom:1rpx solid rgb(240, 240, 240); 
-}
-
-.th-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 20%;
-  text-align: center;
-  font-size: 12pt;
-  height: 100%;
-  color: rgb(79, 100, 115);
-}
-
-
-
-.hero-th {
-  text-align: center;
-  padding: 0 20rpx;
-  display: flex;
-}
-
-.hero-th:nth-child(odd) {
-  background: rgb(250, 250, 250);
-}
-
-.td {
-  line-height: 100rpx;
-  text-align: center;
-  height: 100rpx;
-  width: 20%;
-  font-size: 9pt;
-  color: rgb(79, 100, 115);
-  position: relative;
-}
-
-.td:first-child{
-   border-right:1rpx solid rgb(240, 240, 240); 
-}
-.order{
-  color: #353535;
-  position: absolute;
-  height: 100%;
-  left:-10rpx;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-/* pages/hero_rank/hero_rank.wxss */
 
 .container {
   background: #1c2432;
@@ -105,9 +46,7 @@
   width: 150rpx;
 }
 
-.th-item:nth-child(5) {
-  /* width: 140rpx; */
-}
+
 
 .body {
   padding-top: 50rpx;
@@ -155,8 +94,6 @@
 }
 
 .hero-pic{
-  border:1rpx solid #8b784b;
-  border-radius:3rpx;
   float:left;
   margin-top:20rpx;
   margin-right:20rpx;

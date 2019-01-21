@@ -11,7 +11,7 @@
         胜率
       </view>
       <view class="th-item {{filter==3?'active':''}}" bindtap="sort" data-type="3">
-        登场率
+        出场率
       </view>
       <view class="th-item">
         出装
@@ -20,15 +20,15 @@
   </view>
 
   <view class="body">
-    <view class="hero-th" wx:for="{{hero_rank}}" wx:key="{{index}}">
-      <view class="td">{{index+1}}</view>
+    <view class="hero-th" wx:for="{{rate_data}}" wx:key="{{index}}">
+      <view class="td">{{index + 1}}</view>
       <view class="td">
-        <view class="hero-{{item.heroid}} hero-pic"></view>
-        {{item.heroname}}
+        <view class="hero-pic" style="background:url(https://game.gtimg.cn/images/yxzj/img201606/heroimg/{{item.heroid}}/{{item.heroid}}.jpg) no-repeat center center/100% auto"></view>
+        {{item.hero_name}}
       </view>
-      <view class="td">{{item.winpercent}}%</view>
-      <view class="td">{{item.gameactpercnt}}%</view>
-      <navigator url="/pages/hero_equs/hero_equs?hero_id={{item.heroid}}" class="td">查看</navigator>
+      <view class="td">{{item.winrate/100}}%</view>
+      <view class="td">{{item.appearrate/100}}%</view>
+      <navigator url="/pages/hero_equs/hero_equs?hero_id={{item.heroid}}&hero_name={{item.hero_name}}" class="td">查看</navigator>
     </view>
   </view>
 </view>
