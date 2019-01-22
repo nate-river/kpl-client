@@ -20,15 +20,15 @@
     </view>
 
     <view class="body">
-        <view class="hero-th" wx:for="{{rate_data}}" wx:key="{{index}}">
+        <navigator url="/pages/hero_equs/hero_equs?hero_id={{item.hero_id}}&hero_name={{item.hero_name}}" class="hero-th" wx:for="{{rate_data}}" wx:key="{{index}}">
             <view class="td">{{index+1}}</view>
             <view class="td">
-                <view class=" hero-pic" style="background:url(https://game.gtimg.cn/images/yxzj/img201606/heroimg/{{item.hero_id}}/{{item.hero_id}}.jpg) no-repeat center center/100% auto"></view>
+                <view class=" hero-pic" style="background:url(https://game.gtimg.cn/images/datamore/kingwatch/public/hreo/{{item.hero_id}}.jpg) no-repeat center center/100% auto"></view>
                 {{item.hero_name}}
             </view>
             <view class="td">{{item.win_rate}}</view>
             <view class="td">{{item.in_rate}}</view>
-            <navigator url="/pages/hero_equs/hero_equs?hero_id={{item.hero_id}}&hero_name={{item.hero_name}}" class="td">查看</navigator>
-        </view>
+            <view class="td">查看</view>
+        </navigator>
     </view>
 </view>

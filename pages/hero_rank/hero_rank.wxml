@@ -1,34 +1,34 @@
 <view class="container">
-  <view class="header">
-    <view class="th">
-      <view class="th-item">
-        排名
-      </view>
-      <view class="th-item">
-        英雄
-      </view>
-      <view class="th-item {{filter==4?'active':''}}" bindtap="sort" data-type="4">
-        胜率
-      </view>
-      <view class="th-item {{filter==3?'active':''}}" bindtap="sort" data-type="3">
-        出场率
-      </view>
-      <view class="th-item">
-        出装
-      </view>
+    <view class="header">
+        <view class="th">
+            <view class="th-item">
+                排名
+            </view>
+            <view class="th-item">
+                英雄
+            </view>
+            <view class="th-item {{filter==4?'active':''}}" bindtap="sort" data-type="4">
+                胜率
+            </view>
+            <view class="th-item {{filter==3?'active':''}}" bindtap="sort" data-type="3">
+                出场率
+            </view>
+            <view class="th-item">
+                出装
+            </view>
+        </view>
     </view>
-  </view>
 
-  <view class="body">
-    <view class="hero-th" wx:for="{{rate_data}}" wx:key="{{index}}">
-      <view class="td">{{index + 1}}</view>
-      <view class="td">
-        <view class="hero-pic" style="background:url(https://game.gtimg.cn/images/yxzj/img201606/heroimg/{{item.heroid}}/{{item.heroid}}.jpg) no-repeat center center/100% auto"></view>
-        {{item.hero_name}}
-      </view>
-      <view class="td">{{item.winrate/100}}%</view>
-      <view class="td">{{item.appearrate/100}}%</view>
-      <navigator url="/pages/hero_equs/hero_equs?hero_id={{item.heroid}}&hero_name={{item.hero_name}}" class="td">查看</navigator>
+    <view class="body">
+        <navigator url="/pages/hero_equs/hero_equs?hero_id={{item.heroid}}&hero_name={{item.hero_name}}" class="hero-th" wx:for="{{rate_data}}" wx:key="{{index}}">
+            <view class="td">{{index + 1}}</view>
+            <view class="td">
+                <view class="hero-pic" style="background:url(https://game.gtimg.cn/images/datamore/kingwatch/public/hreo/{{item.heroid}}.jpg) no-repeat center center/100% auto"></view>
+                {{item.hero_name}}
+            </view>
+            <view class="td">{{item.winrate/100}}%</view>
+            <view class="td">{{item.appearrate/100}}%</view>
+            <view class="td">查看</view>
+        </navigator>
     </view>
-  </view>
 </view>

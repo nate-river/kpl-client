@@ -30,7 +30,7 @@
             },
             {
                 "pagePath": "pages/hero/hero",
-                "text": "比赛胜率",
+                "text": "联赛胜率",
                 "iconPath": "/img/hero.png",
                 "selectedIconPath": "/img/hero_active.png"
             }

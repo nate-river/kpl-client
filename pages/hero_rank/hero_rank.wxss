@@ -93,8 +93,6 @@
 }
 
 .hero-pic{
-  border:1rpx solid #8b784b;
-  border-radius:3rpx;
   float:left;
   margin-top:20rpx;
   margin-right:20rpx;
