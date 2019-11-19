@@ -34,7 +34,7 @@ exports.main = async(event, context) => {
         o.hero_id = event.hero_id;
         await db.collection('equ').add({
             data: o
-        })
+        }) 
         return o;
     }
 }

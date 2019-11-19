@@ -5,7 +5,7 @@ Page({
      * 页面的初始数据
      */
     data: {
-       
+
     },
 
     /**
@@ -23,14 +23,23 @@ Page({
             data: {
                 hero_id: options.hero_id
             },
-            success:res=>{
+            success: res => {
                 wx.hideLoading();
                 wx.setNavigationBarTitle({
                     title: options.hero_name + '实战出装',
                 })
-                this.setData({
-                    list:res.result.data.list
-                })
+
+                if (res.result.data.list.length) {
+                    this.setData({
+                        list: res.result.data.list
+                    })
+                } else {
+                    wx.showToast({
+                        title: `${this.data.hero_name}最近没有上场`,
+                        icon: 'none'
+                    })
+                }
+
             }
         })
     },
@@ -39,7 +48,7 @@ Page({
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function() {
-        
+
     },
 
     /**
